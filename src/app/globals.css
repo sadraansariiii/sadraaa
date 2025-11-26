@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+:root {
+  --orgin-color: #ff7300;
+  --text-color: #e4e4e4;
+  --input-bg: #444444;
+  --bg-color: #444444;
+  --bg-color2: #696969;
+  --placeholder-color: #797979;
+  --green-color: #419b14;
+  --blue-color: #109cd3;
+  --red-color: #b11416;
+}
+
+@font-face {
+  font-family: sans;
+  src: url("../../public/fonts/sans/bold.ttf"),
+    url("../../public/fonts/sans/light.ttf"),
+    url("../../public/fonts/sans/medium.ttf"),
+    url("../../public/fonts/sans/regular.ttf");
+}
+
+* {
+  font-family: sans;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+::selection {
+  background-color: var(--orgin-color);
+  color: var(--text-color);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff7300;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e66900;
+}
+
+.background-image-login,
+.background-image-login2 {
+  background-image: url("../../public/img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background-image-login2 {
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+}
+
+.glass-filter {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.3px);
+  -webkit-backdrop-filter: blur(14.3px);
+}
+
+.test-Shadow-top {
+  box-shadow: -10px -10px 0px 0px red;
+}
+
+.test-Shadow-bottom {
+  box-shadow: 10px 10px 0px 0px red;
+}
+
+/* radio button style */
+.radio-custom {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--orgin-color);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.radio-custom:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: var(--orgin-color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+/* radio button style */
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #ff7300;
+  transform: scale(1.2);
+}
+
+.recharts-legend-item {
+  display: flex;
+  gap: 10px;
+}
+
+/* delete scroull bar */
+::-webkit-scrollbar {
+  display: none;
+}
+/* delete scroull bar */
+
+.swot_shadow {
+  box-shadow: 0px 0px 10px 1px #5e5e5e;
+}
+
+/* tool tip style */
+.custom-tooltip-with-border .ant-tooltip-inner {
+  border: 2px solid var(--orgin-color);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--text-color);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--orgin-color);
+}
+
+.custom-tooltip-with-border .ant-tooltip-arrow::before {
+  background: var(--orgin-color);
+}
+/* tool tip style */
+/* input error aniamtion */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.6s ease-in-out;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* input error aniamtion */
+
+/* select style */
+:where(.css-dev-only-do-not-override-1odpy5d).ant-select-outlined:not(
+    .ant-select-customize-input
+  )
+  .ant-select-selector {
+  background-color: transparent !important;
+  color: var(--text-color) !important;
+  border: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+/* select style */
+
+/* tag stayle */
+:where(.css-dev-only-do-not-override-1odpy5d).ant-tag.ant-tag-processing {
+  color: var(--blue-color) !important;
+  background: transparent !important;
+  border-color: var(--blue-color) !important;
+  margin: 0 !important;
+}
+
+:where(.css-dev-only-do-not-override-1odpy5d).ant-tag.ant-tag-success {
+  color: var(--green-color) !important;
+  background: transparent !important;
+  border-color: var(--green-color) !important;
+  margin: 0 !important;
+}
+:where(.css-dev-only-do-not-override-1odpy5d).ant-tag.ant-tag-error {
+  color: var(--red-color) !important;
+  background: transparent !important;
+  border-color: var(--red-color) !important;
+  margin: 0 !important;
+}
+/* tag stayle */
+
+.SWOT-shadow {
+  box-shadow: 0 0 20px 2px #525252;
+}
